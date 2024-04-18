@@ -20,6 +20,12 @@ body{
                 'sidebar header'
                 'sidebar main-body';
 }
+.icon-svg{
+    width: 25px;
+    height: 25px;
+    filter: invert(80%) sepia(98%) saturate(5365%) hue-rotate(187deg) brightness(127%) contrast(100%);
+}
+
 .header{
     grid-area: header;
     background-color: rgba(40, 127, 204, 0.296);
@@ -65,9 +71,44 @@ body{
 }
 .info-bar{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 2fr 1fr;
     padding:5px 30px;
+    gap: 10px;
 }
+
+.infobar-profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile-bigger {
+    width: 100px;
+    height: 100px;
+}
+
+.infobar-profile .user-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.buttons-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+
+}
+button{
+    font-size:1.25rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(20, 151, 187);
+    color: white;
+    width: 100px;
+}
+
 .main-body{
     grid-area: main-body;
     background-color: rgb(210, 231, 249);
@@ -76,10 +117,5 @@ body{
     grid-area: sidebar;
     background-color: rgb(20, 151, 187);
     color: white;
-}
-.icon-svg{
-    width: 25px;
-    height: 25px;
-    filter: invert(80%) sepia(98%) saturate(5365%) hue-rotate(187deg) brightness(127%) contrast(100%);
 }
 
